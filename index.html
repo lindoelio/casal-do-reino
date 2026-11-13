@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Casal do Reino — Programa de Discipulado</title>
+<style>
+:root {
+  --navy: #1B365D;
+  --gold: #C4A35A;
+  --cream: #F7F1E3;
+  --soft: #F4F6F8;
+  --green: #2E5A3C;
+  --text: #222;
+  --muted: #555;
+  --white: #fff;
+  --shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background: var(--cream);
+  color: var(--text);
+  line-height: 1.6;
+}
+header {
+  background: var(--navy);
+  color: white;
+  padding: 1.2rem 1.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: var(--shadow);
+}
+header h1 { margin: 0; font-size: 1.4rem; }
+header p { margin: 0.3rem 0 0; opacity: 0.85; font-size: 0.9rem; }
+nav {
+  background: white;
+  border-bottom: 3px solid var(--gold);
+  position: sticky;
+  top: 72px;
+  z-index: 99;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 0.4rem 0.5rem;
+}
+nav a {
+  display: inline-block;
+  padding: 0.5rem 0.9rem;
+  text-decoration: none;
+  color: var(--navy);
+  font-weight: 600;
+  font-size: 0.85rem;
+  border-radius: 6px;
+}
+nav a:hover, nav a.active { background: var(--navy); color: white; }
+main { max-width: 860px; margin: 0 auto; padding: 1.5rem 1rem 4rem; }
+.lesson { display: none; }
+.lesson.active { display: block; }
+h2 { color: var(--navy); border-bottom: 2px solid var(--gold); padding-bottom: 0.3rem; }
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.2rem 1.4rem;
+  margin: 1rem 0;
+  box-shadow: var(--shadow);
+}
+.card h3 { margin-top: 0; color: var(--green); }
+.memory { border-left: 5px solid var(--gold); }
+.mission { border-left: 5px solid var(--green); }
+.verse { font-size: 1.15rem; font-style: italic; color: var(--navy); }
+blockquote { margin: 0.5rem 0; padding-left: 1rem; border-left: 3px solid var(--gold); }
+.steps ol { padding-left: 1.2rem; }
+.steps li { margin: 0.4rem 0; }
+.badge { background: var(--gold); color: var(--navy); padding: 0.15rem 0.5rem; border-radius: 4px; font-size: 0.75rem; font-weight: bold; }
+footer { text-align: center; padding: 2rem; color: var(--muted); font-size: 0.85rem; }
+@media (max-width: 600px) {
+  header h1 { font-size: 1.2rem; }
+  nav a { font-size: 0.78rem; padding: 0.4rem 0.6rem; }
+}
+</style>
+</head>
+<body>
+<header>
+  <h1>Casal do Reino</h1>
+  <p>Programa de discipulado semanal para casais</p>
+</header>
+<nav id="nav">
+  <a href="#intro" class="active" onclick="show('intro')">Início</a>
+  <a href="#s1" onclick="show('s1')">1. Origem</a>
+  <a href="#s2" onclick="show('s2')">2. Ordem</a>
+  <a href="#s3" onclick="show('s3')">3. Oposição</a>
+  <a href="#s4" onclick="show('s4')">4. Votos</a>
+  <a href="#s5" onclick="show('s5')">5. União</a>
+  <a href="#s6" onclick="show('s6')">6. Papéis</a>
+  <a href="#s7" onclick="show('s7')">7. Resoluções</a>
+  <a href="#s8" onclick="show('s8')">8. Pedidos</a>
+  <a href="#s9" onclick="show('s9')">9. Restauração</a>
+  <a href="#s10" onclick="show('s10')">10. Recursos</a>
+  <a href="#s11" onclick="show('s11')">11. Romance</a>
+  <a href="#s12" onclick="show('s12')">12. Reconstrução</a>
+  <a href="#s13" onclick="show('s13')">13. Retorno</a>
+  <a href="#conclusao" onclick="show('conclusao')">Conclusão</a>
+</nav>
+<main>
+<!-- content truncated in this call for length; full file will be pushed via alternative if needed -->
+</main>
+<script>
+function show(id) {
+  document.querySelectorAll('.lesson').forEach(el => el.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  document.querySelectorAll('#nav a').forEach(a => a.classList.remove('active'));
+  event.target.classList.add('active');
+  window.scrollTo(0,0);
+}
+</script>
+</body>
+</html>
